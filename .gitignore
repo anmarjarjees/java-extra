@@ -1,3 +1,11 @@
+# 
+.vscode/
+my-notes.txt
+
+# Temp Ignore:
+p_lambda_expressions/
+
+
 # Compiled class file
 *.class
 
