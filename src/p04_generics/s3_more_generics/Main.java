@@ -37,7 +37,7 @@ public class Main {
     } // end main()
 
     /*
-     * Besides the Generic Classes,
+     * Besides the "Generic Classes",
      * We can have "Generic Methods"
      */
     private static <T> void printAnything(T anyVariable) {

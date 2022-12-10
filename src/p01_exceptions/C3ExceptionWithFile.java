@@ -45,7 +45,7 @@ public class C3ExceptionWithFile {
          * Code,
          * or any other IDE
          * 
-         * so immediately after the main() method signiture,
+         * so immediately after the main() method signature,
          * we can add "throws IOException"
          */
         myFile.createNewFile();

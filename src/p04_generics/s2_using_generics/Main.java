@@ -27,6 +27,17 @@ public class Main {
          * In the older versions of Java, we used to add <Integer> again,
          * but with the new versions no need
          */
+
+        /*
+         * Important Note:
+         * Generics will not accept primitive data types:
+         * int, double, float
+         * 
+         * We have to use the "Wrapper Classes":
+         * Integer instead of int
+         * Double instead of double
+         * Float instead of float
+         */
         Output<Integer> print1 = new Output<>(200);
         print1.printVar();
 
@@ -39,16 +50,6 @@ public class Main {
         Output<String> print4 = new Output<>("Java");
         print4.printVar();
 
-        /*
-         * Important Note:
-         * Generics will not accept primitive data types:
-         * int, double, float
-         * 
-         * We have to use the "Wrapper Classes":
-         * Integer instead of int
-         * Double instead of double
-         * Float instead of float
-         */
     } // end main()
 
 } // end class file

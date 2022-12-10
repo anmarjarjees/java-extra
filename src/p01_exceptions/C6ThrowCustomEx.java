@@ -76,7 +76,7 @@ public class C6ThrowCustomEx {
              * Notice below because our custom exception "OutOfRangeException"
              * extends the "Exception" class so it's a "Checked Exception"
              * 
-             * So we must either specify it in our method signiture
+             * So we must either specify it in our method signature
              * with the keyword "throw"
              * or by adding try/catch
              * as we explained before.

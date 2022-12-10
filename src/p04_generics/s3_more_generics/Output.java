@@ -6,7 +6,7 @@ package p04_generics.s3_more_generics;
  * - Car class extends Vehicle class
  * - Bus class extends Vehicle class
  * 
- * we can use extends the <T> "for type by convention" to extend the superclass "Vehicle"
+ * we can use "extends" with the <T> "for type by convention" to extend the superclass "Vehicle"
  * so class "Output" can print both "Car" and "Bus"
  * 
  * When we make our Generic "T" type extending a class,

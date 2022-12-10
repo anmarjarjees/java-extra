@@ -152,7 +152,7 @@ public interface Consumer<T> {
 
 NOTES:
 1. Beside the single abstract method that available in every functional interface, interface can also provide a default and static method (function). The "Function" functional interface has a default method named andThen() that performs another task/operation on the result from the previous operation.
-You can check the file C02PredSuppFunc.java
+You can check the file **C02PredSuppFunc.java**
 
 2. Besides the Java built-in functional interfaces, we can create our own functional interfaces as well. Check the file 
 

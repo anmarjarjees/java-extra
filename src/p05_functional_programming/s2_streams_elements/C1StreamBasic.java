@@ -23,9 +23,10 @@ public class C1StreamBasic {
          * original array
          */
 
-        // Example1: Printing the nomal sequence of numbers (even/odd) from (0 to 21)
+        // Example1: Printing the normal sequence of numbers (even/odd) from (0 to 21)
         // by dividing each number by 2
         System.out.println("Even Numbers:");
+        // Static method "stream()"
         Arrays.stream(evenNumbers)
                 .forEach(num -> System.out.println(num / 2 + " "));
 
@@ -46,7 +47,7 @@ public class C1StreamBasic {
         /*
          * Let's try .parallel() method,
          * stream will process the array's elements in parallel.
-         * so multiple threads are used to process the elements of the stream
+         * so multiple "threads" are used to process the elements of the stream
          * at the same time
          * 
          * so the output/result

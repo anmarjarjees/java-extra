@@ -53,11 +53,15 @@ public class C01Consumer {
 
         /*
          * To clearly practice and understand the "Consumer" interface:
-         * - importing the interface
-         * - create a variable "printAnyString" of Consumer
+         * - importing the required functional interface "Consumer"
+         * - create a variable "printAnyString" of type Consumer
          * and String data type for the elements:
          */
         Consumer<String> printAnyString = strValue -> System.out.println(strValue);
+
+        // for testing:
+        System.out.println("printAnyString var type: " + printAnyString.getClass().getSimpleName());
+        // printAnyString var type: C01Consumer$$Lambda$2/0x0000000800c00c28
 
         /*
          * We are calling forEach() and passing the interface variable "printAnyString"
@@ -78,14 +82,39 @@ public class C01Consumer {
 
         printAnyString.accept("Java is one of our lovely language!");
 
+        System.out.println();
+        System.out.println();
         // More practice about printing double values:
         Consumer<Double> printDoubleValue = numValue -> System.out.println(numValue);
         // accept(Double t) : void
+
+        /*
+         * NOTES:
+         * About any functional interface abstract method
+         * that deals with Double Data types:
+         * > Passing a variable of type "double" or "Double" is accepted
+         * > passing a literal numeric value => x like 19 will not be accepted
+         * > passing the literal numeric value => x.x like 19.21 will be accepted
+         * Because of the Wrapper Class rules
+         */
         printDoubleValue.accept(10.0 + 5.0);
+
+        double testNum = 100;
+        printDoubleValue.accept(testNum); // is accepted
+
+        // Review:
+        // double x = 9; // is accepted
+        // Double y = 10.0; // is accepted
+        // Double y = 10; // is NOT accepted
+
+        printDoubleValue.accept(19.0 / 91.0); // 0.2087912087912088
 
         // More practice about printing int values:
         Consumer<Integer> printIntValue = numValue -> System.out.println(numValue);
         printIntValue.accept(10 + 5);
+
+        // The following accept will ignore the decimal points:
+        printIntValue.accept(19 / 91); // 0
 
         /*
          * Beside using the Lambda Expression: value -> System.out.println(value)
@@ -95,6 +124,10 @@ public class C01Consumer {
          */
         Consumer<String> printString = System.out::println;
         printString.accept("Another way to work with Consumer method");
+
+        // One final example:
+        Consumer<Double> printDouble = System.out::println;
+        printDouble.accept(25.8 / 31.9); // 0.8087774294670848
 
     } // main()
 } // class file

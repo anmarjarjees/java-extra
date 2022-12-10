@@ -1,7 +1,7 @@
 package p04_generics.s1_why_generics;
 
 public class OutputDouble {
-    double myVar;
+    private double myVar;
 
     public OutputDouble(double myVar) {
         this.myVar = myVar;
