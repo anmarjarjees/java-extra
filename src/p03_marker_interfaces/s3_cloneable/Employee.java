@@ -2,7 +2,7 @@ package p03_marker_interfaces.s3_cloneable;
 
 /* 
  * This class must implement the interface "Cloneable"
- * so we its object can be duplicated (cloned)
+ * so its object(s) can be duplicated (cloned)
  * 
  * Cloneable interface is from the default package of Java,
  * so no need to be imported (it's built-in by default)
@@ -57,7 +57,7 @@ public class Employee implements Cloneable {
      * IMPORTANT NOTE:
      * The clone() method is coming from the Java mother class "Object"
      * The clone() method is protected.
-     * So you have to override clone() method
+     * So you have to override the clone() method
      * override the clone() method in your class and make it public.
      */
 

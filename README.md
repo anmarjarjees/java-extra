@@ -26,7 +26,7 @@ This interface gives us the option for using the clone() method to make our obje
 
 ### Serializable Interface
 The concept "Serialization" in Java is useful and can be used:
-- to recreate an object with its original state (properties values) between different JVM in different machines/platform/OS
+- to recreate an object with its original state (properties values) between different JVM in different machines/platforms/OS
 - to convert object into a stream of bytes to be easily transferred between different JVM in different machines/platform/OS
 
 JVM creates a stream of bytes of "object1" for example in "computer1" (converting it into a byte array) through the "Serialization" process, then this object can be:
@@ -195,6 +195,27 @@ System.out.println(Thread.currentThread().getName()); // main <=> the name of ou
 ### Stream Operations:
 Stream API provides different operations that can be performed on streams.
 
+# Java Concurrency (Working with Threads)
+By default, Java has one thread to be run at time this default thread is the "main()" method. There are 4 different ways to create a new thread in Java:
+1- Create a class that extends the "Thread" class, and override its method "run()"
+    - Check the packages (folders) "demo1, 2, 3, and 4"
+2- Create a class implements the "Runnable" interface, and passing an instance of this "Runnable" interface to the constructor of the "Thread". when the thread starts, it will execute the run method of that "Runnable" interface
+    - Check the package (folder) "demo5"
+3- Create an anonymous implementation of the "Runnable" interface using an inner anonymous class
+    - Check the package (folder) "demo6"
+4- Create a Java Lambda Expression that implements the "Runnable" interface
+    - Check the package (folder) "demo7"
+
+Both ways can do the same job and apply the same result, the advantage of using the second way, is we can have our class to extend other class if needed since it's implementing an interface. While in the first way, our class is extending the "Thread" class so that's, we cannot extends other class as it's not allowed in java. To recap we can create a class to implement multiple interfaces but can only extend one class as Java doesn't allow multiple inheritance.
+
+# Working with [Java Concurrency Utilities](https://docs.oracle.com/javase/8/docs/technotes/guides/concurrency/index.html):
+The concurrency utilities packages provide a powerful, extensible framework of high-performance threading utilities. 
+This package frees the programmer from the need to craft these utilities by hand, in much the same manner the collections framework did for data structures. Additionally, these packages provide low-level primitives for advanced concurrent programming. You can check this quick introductory guid for beginners about ["Concurrent Programming"](https://www.toptal.com/software/introduction-to-concurrent-programming)
+
+Java provides the package "java.util.concurrent" which contains Utility classes commonly useful in concurrent programming.
+
+This package contains many interfaces and classes. Starting with the most commonly used interfaces:
+- Executors Interface
 
 NOTE: These 2 packages have been moved to another repo. To learn more about Swing/AWT GUI and Events, check my rep [Java-UI-Swing](https://github.com/anmarjarjees/java-ui-swing)   
 user_interfaces (package)
