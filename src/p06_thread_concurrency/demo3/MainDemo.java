@@ -8,9 +8,9 @@ public class MainDemo {
          * 
          * Below are running 4 threads at the same time:
          */
-        for (int i = 1; i <= 4; i++) {
-            MultiThreadDemo manyThread = new MultiThreadDemo(i);
-            manyThread.start();
+        for (int i = 0; i <= 4; i++) {
+            MultiThreadDemo currentThread = new MultiThreadDemo(i);
+            currentThread.start();
         }
         /*
          * You can see that the output shows the thread numbers

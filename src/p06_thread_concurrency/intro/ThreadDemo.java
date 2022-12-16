@@ -18,7 +18,7 @@ public class ThreadDemo {
          */
         myThread.start();
         /*
-         * If you run the applicatoin, you will not see anything
+         * If you run the application, you will not see anything
          * as the Thread "myThread" doesn't do anything,
          * it just starts and ends immediately
          */
