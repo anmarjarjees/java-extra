@@ -25,7 +25,8 @@ public class C1ExceptionIdea {
          */
         Scanner input = new Scanner(System.in);
         /*
-         * The numerator => the number above the line in a fraction
+         * result = numerator/denominator
+		 * The numerator => the number above the line in a fraction
          * The denominator => the number below the line in a fraction
          * 
          * IMPORTANT NOTE:
