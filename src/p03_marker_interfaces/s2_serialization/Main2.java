@@ -6,6 +6,10 @@ import java.io.File;
 
 // import java.io.ObjectOutputStream;
 
+/* 
+ * Notice that in this file,
+ * we are also practising the use of "Stream" in Java
+ */
 // With Deserializing, we need to import:
 import java.io.ObjectInputStream;
 import java.io.FileInputStream;
