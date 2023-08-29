@@ -1,4 +1,4 @@
-package p05_functional_programming.s1_functional_interfaces;
+package p05_functional_programming.s3_functional_interfaces;
 
 /* 
  * This file is to be used with C03MyFuncInterface
@@ -26,7 +26,7 @@ public interface MyFuncInterface<T, R> {
 /*
  * Notice we could create our custom Functional Interface
  * to be very limited to return integer data types
- * without acceding any parameters:
+ * without accepting any parameters:
  */
 
 /*

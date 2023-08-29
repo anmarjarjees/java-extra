@@ -1,4 +1,4 @@
-package p05_functional_programming.s1_functional_interfaces;
+package p05_functional_programming.s3_functional_interfaces;
 
 import java.util.Scanner;
 import java.util.ArrayList;

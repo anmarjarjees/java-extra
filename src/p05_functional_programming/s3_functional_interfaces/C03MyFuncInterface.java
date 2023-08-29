@@ -1,4 +1,4 @@
-package p05_functional_programming.s1_functional_interfaces;
+package p05_functional_programming.s3_functional_interfaces;
 
 public class C03MyFuncInterface {
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 # java-extra
 Extra Java Contents Beyond The Essentials (Java miscellanea)
+
 # Anonymous Inner Class
 Anonymous/Inner Class has the following features:
 - has NO name that can be used to instantiate only one object. The class are defined/declared and instantiated at the same time (same line).
@@ -53,12 +54,12 @@ Generic forces the idea of "Type Safe"
 **Check the package "p01_marker_interfaces" section#2 "s2_serialization"**
 
 # Functional Programming
-A style of programming where we apply pure functions to an input set to produce an output. In Functional Programming:
-- Functions can take other function as input 
-- Functions can return/output other functions
-- The output of a function depends only on its input. It is always the same, as long as the input doesn't change.
-
 Java is not considered to be a functional programming language, it's an OOP language. But with Java 8, we have functional interfaces. In functional programming we focus on functions instead of focusing on objects.
+
+A style of programming where we apply pure functions to an input set to produce an output. In Functional Programming:
+- A functions that can take another function as an input (argument)
+- A functions that can return/output other function
+- The output of a function depends only on its input. It is always the same, as long as the input doesn't change.
 
 Java 8 added two new packages to support the idea of "Functional Programming":
 - [java.util.function](https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html)
@@ -66,11 +67,15 @@ Java 8 added two new packages to support the idea of "Functional Programming":
 
 So in Java 8 and later => Functional Interface (java.util.function)
 
+Functional programming was introduced in Java since version 8 by using these two features that help us to implement functional programming:
+- Lambdas
+- Streams
+
 ## Functional Interface
 An interface that contains **only one abstract method** that can be implemented by **"lambda expressions"** and **"method references"**. It represents abstract concept such as functions
 
 ## Lambda Expression
-Lambda Expression is a block of code that you can pass around so it can be exectuted, once or multiple times. It is built on using interfaces, and it was introduced in Java 8.
+Lambda Expression is a block of code that you can pass around so it can be executed, once or multiple times. It is built on using interfaces, and it was introduced in Java 8.
 Lambda Expression Syntax for:
 - Implementing a functional interface (Single method Interface)
 - Having functions to act as objects

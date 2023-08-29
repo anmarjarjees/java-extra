@@ -19,7 +19,7 @@ public class C3ExceptionWithFile {
          * 
          * if we remove the folder name "data"
          * and just keep the file name "any.txt"
-         * Java will simply created on the room folder
+         * Java will simply create it on the root folder
          * 
          * In the code below, we are just creating an object
          * with specifying the parameters

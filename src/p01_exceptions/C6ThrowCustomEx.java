@@ -39,7 +39,7 @@ public class C6ThrowCustomEx {
     public static double getGrossPayment(double hours, double payRate) {
         if (hours > 40) {
             /*
-             * using "trow" then the instantiation of an existing exception
+             * using "throw" then the instantiation of an existing exception
              * Java provides many exceptions that we can use
              * or we can create a new exception class based on our needs
              * 
@@ -66,6 +66,9 @@ public class C6ThrowCustomEx {
         return hours * payRate;
     } // getGrossPayment()
 
+	/*
+	Below, we are adding our own custom exception "OutOfRangeException"
+	*/
     public static double getAverage(double value1, double value2) throws OutOfRangeException {
         /*
          * we can add more () for better readability:

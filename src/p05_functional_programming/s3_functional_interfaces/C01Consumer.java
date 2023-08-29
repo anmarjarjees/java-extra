@@ -1,4 +1,4 @@
-package p05_functional_programming.s1_functional_interfaces;
+package p05_functional_programming.s3_functional_interfaces;
 
 import java.util.List;
 /* 
@@ -66,7 +66,7 @@ public class C01Consumer {
         /*
          * We are calling forEach() and passing the interface variable "printAnyString"
          * But the implementation we provided for the method "accept"
-         * is what is being exectuted
+         * is what is being executed
          */
         provinces.forEach(printAnyString);
 

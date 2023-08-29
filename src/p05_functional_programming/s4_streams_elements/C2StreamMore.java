@@ -1,4 +1,4 @@
-package p05_functional_programming.s2_streams_elements;
+package p05_functional_programming.s4_streams_elements;
 
 public class C2StreamMore {
     /*
