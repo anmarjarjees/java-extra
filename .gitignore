@@ -1,6 +1,7 @@
 # 
 .vscode/
 my-notes.txt
+bin/
 
 # Temp Ignore:
 p_lambda_expressions/

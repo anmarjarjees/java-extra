@@ -68,8 +68,8 @@ Java 8 added two new packages to support the idea of "Functional Programming":
 So in Java 8 and later => Functional Interface (java.util.function)
 
 Functional programming was introduced in Java since version 8 by using these two features that help us to implement functional programming:
-- Lambdas
-- Streams
+- Lambdas => Refer to Package5 (P05), section1 to section3
+- Streams => Refer to Package5 (P05), section4
 
 ## Functional Interface
 An interface that contains **only one abstract method** that can be implemented by **"lambda expressions"** and **"method references"**. It represents abstract concept such as functions
@@ -91,8 +91,14 @@ Look the **Lambda Expression** example that we used to iterate through a list/se
 System.out.println(provinces.size() + " provinces: " + provinces);
 
 provinces.forEach(province -> System.out.println(province));
-
 ```
+
+## Streams API:
+Stream API can be used with lambdas to create concise or powerful code
+
+
+## Lambda Expression with the Java built-in Functional Interfaces
+
  **Lambda Expression** is an implementation of the "Consumer Functional Interface" from the java.util.function package.
  
  Below is the first part of original "Consumer" Interface:
