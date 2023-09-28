@@ -26,7 +26,7 @@ public class C1ExceptionIdea {
         Scanner input = new Scanner(System.in);
         /*
          * result = numerator/denominator
-		 * The numerator => the number above the line in a fraction
+         * The numerator => the number above the line in a fraction
          * The denominator => the number below the line in a fraction
          * 
          * IMPORTANT NOTE:
@@ -124,6 +124,14 @@ public class C1ExceptionIdea {
          * 
          * so if you input a String value instead of integer numeric value,
          * You will get: InputMismatchException
+         */
+
+        /*
+         * SUMMARY:
+         * 3 Exception Classes were tested in this file:
+         * - InputMismatchException => different data type
+         * - ArithmeticException => division by 0
+         * - ArrayIndexOutOfBoundsException
          */
     } // end main()
 } // end class file
