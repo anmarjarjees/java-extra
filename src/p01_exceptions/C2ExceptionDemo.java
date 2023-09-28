@@ -3,7 +3,7 @@ package p01_exceptions;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class C2ExceptionWork {
+public class C2ExceptionDemo {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         /*
@@ -11,7 +11,14 @@ public class C2ExceptionWork {
          * with a set of { } braces of try block
          */
         try {
-
+            /*
+             * If the user inputs a decimal value or a string
+             * Java will throw an "Exception"
+             * 
+             * Two exceptions, we might examine in this example:
+             * - InputMismatchException => different data type
+             * - ArithmeticException => division by 0
+             */
             System.out.print("Enter your first whole number (the numerator): ");
             int n1 = input.nextInt();
             System.out.print("Enter your second whole number (the denominator): ");
@@ -83,7 +90,7 @@ public class C2ExceptionWork {
              * The finally block will not be by displaying funny messages!
              * it could be used for closing any opened object:
              * 
-             * NOTE: Due to the varaible scope,
+             * NOTE: Due to the variable scope,
              * the Scanner object has to be displayed outside the try block
              * inside the main() script
              */

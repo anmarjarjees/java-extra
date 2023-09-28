@@ -63,9 +63,9 @@ public class C3ExceptionWithFile {
         /*
          * IMPORTANT NOTE (TYPES OF EXCEPTIONS):
          * *************************************
-         * - Checked Exceptions => are verified by the compiler before the code is
+         * 1- Checked Exceptions => are verified by the compiler before the code is
          * executed
-         * - Unchecked Exceptions => are NOT verified by the compiler.
+         * 2- Unchecked Exceptions => are NOT verified by the compiler.
          * Run-time exception and all its classes are considered to be
          * "Unchecked Exception"
          * 
