@@ -34,13 +34,15 @@ public class Main2 {
         File myFile = new File("temp-files/test.ser");
 
         // Open a file stream:
+        // FileInputStream object to be used in writing to this file:
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(myFile));
 
-        // Object deserialization
+        // Finally: Object deserialization
         Employee emp2 = (Employee) ois.readObject();
 
         System.out.println(emp2);
 
+        // close it:
         ois.close();
         // }
         // catch (Exception e) {

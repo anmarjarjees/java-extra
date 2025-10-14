@@ -26,6 +26,9 @@ public class Main1 {
              * 
              * NOTE: By convention, we use the .ser extension for "serialization"
              */
+
+            // Create the object "myFile" of type "File":
+            // For Saving our obj into a file .ser by convention:
             File myFile = new File("temp-files/test.ser");
 
             // FileOutputStream object to be used on writing on this file
@@ -44,14 +47,17 @@ public class Main1 {
              * new FileOutputStream(myFile));
              */
 
-            // Create the object
+            // Create the object "emp1" of type "Employee":
             Employee emp1 = new Employee("Alex Chow", "Computer Programmer", 25);
 
-            // Object serialization
+            // Finally: Object serialization
             oos.writeObject(emp1);
 
+            // Just printing an optional confirmation message:
             System.out.println(
                     "Your object with all its properties has been saved to test.ser file inside \"temp-files\" folder");
+
+            // close it:
             oos.close();
         } catch (IOException e) {
             System.out.println(e.getMessage());

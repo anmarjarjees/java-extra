@@ -34,7 +34,11 @@ public class Student {
         return age;
     }
 
-    public void getInfo() {
+    /*
+     * Creating a new custom method for printing the Student Info,
+     * Or just override the toString() :-)
+     */
+    public void printInfo() {
         System.out.println("Full Name: " + name + "\nProgram: " + program + "\nAge: " + age);
     }
 }

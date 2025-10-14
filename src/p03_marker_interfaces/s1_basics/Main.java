@@ -12,7 +12,7 @@ public class Main {
          * the marker interface "Display"
          */
 
-        // Check if the class an instance of the interface "Display()":
+        // Check if the class is an instance of the interface "Display()":
         /*
          * NOTE:
          * Notice that we are checking of the "myObj1" is an instance of an interface
@@ -21,12 +21,15 @@ public class Main {
          * "Display"
          * So we can check if "myObj1" is an instance of an interface "Display" or not
          */
+
+        // check if the user1 is a library member
+        // in coding check if user1 is an instance of LibraryMember interface:
         if (user1 instanceof LibraryMember) {
-            System.out.println("You can borrow/use the computer/access the online library.");
+            System.out.println("You can borrow/use the computer/access the online library resources.");
             user1.canBorrow();
         } else {
             System.out.println(
-                    "Sorry, you doesn't have the permission to borrow/use the computer/access the online library.");
+                    "Sorry, you doesn't have the permission to borrow/use the computer/access the online library resources.");
         }
     }
 }

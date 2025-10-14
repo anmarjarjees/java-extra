@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
         Student st1 = new Student("Alex Chow", "Web Development", 25);
 
+        // if we want to copy/clone ? Which one?
         Student st2 = st1;
         System.out.println(st1 == st2); // true
         /*
@@ -13,22 +14,25 @@ public class Main {
          * so changing the student1 will also change student2 and vise versa!
          */
         System.out.println("Same info for the two students:");
-        st1.getInfo();
-        st2.getInfo();
+        st1.printInfo();
+        st2.printInfo();
 
         // Change the name for one student
+        // Change the name for one student (only student2)? What do you think?
         st2.setName("Martin Smith");
         System.out.println("After changing only one student:");
 
-        st1.getInfo();
-        st2.getInfo();
+        // testing:
+        st1.printInfo();
+        st2.printInfo();
 
         // Another example:
         int[] myArray1 = { 1, 2, 3, 4 };
         int[] myArray2;
         myArray2 = myArray1;
 
-        myArray2[0] = 5;
+        // Modify myArray2:
+        myArray2[0] = 5; // override the value of the first element
         // myArray2[1] = 6;
         // myArray2[2] = 7;
         // myArray2[3] = 8;
@@ -36,7 +40,7 @@ public class Main {
 
         System.out.println("Working with cloning:");
         /*
-         * After using Cloneable Interface to solve the issue
+         * After using "Cloneable Interface" to solve the issue
          */
         Employee emp1 = new Employee("James Dean", "Web Developer", 35);
 
@@ -77,11 +81,17 @@ public class Main {
         System.out.println(emp1.hashCode());
         System.out.println(emp2.hashCode());
 
+        System.out.println(emp1 == emp2); // true
+
         /*
          * now you can try to change any object: emp1, emp2 then print them again
          * and you will see that they are separate copies
          */
 
-        System.out.println(emp1 == emp2); // true
-    }
-}
+        emp2.setName("Alain Delon");
+
+        System.out.println(emp1.getName());
+        System.out.println(emp2.getName());
+
+    } // main()
+} // class

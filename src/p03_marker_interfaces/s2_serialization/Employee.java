@@ -68,11 +68,13 @@ public class Employee implements Serializable {
     // long value:
     // private static final long serialVersionUID = 6971726947666774470L;
 
+    // Class :
     private String name, jobTitle;
     private double payment;
 
     private int empId;
 
+    // Constructor:
     public Employee(String name, String jobTitle, double payment) {
         this.name = name;
         this.jobTitle = jobTitle;
@@ -80,6 +82,13 @@ public class Employee implements Serializable {
     }
 
     public String toString() {
+        // First Way:
+        // => using the classical way with concatenation:
+        String msg = "";
+        msg += name + " - " + "Job Title: " + jobTitle; // keep going
+
+        // Second Way:
+        // => instead of using + for concatenating string, using "StringBuffer":
         StringBuffer sb = new StringBuffer();
         return sb.append(name)
                 .append(" - ")
@@ -91,6 +100,7 @@ public class Employee implements Serializable {
                 .toString();
     }
 
+    // Just adding public getter and setter as usual :-)
     public int getEmpId() {
         return empId;
     }
