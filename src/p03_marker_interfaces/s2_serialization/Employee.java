@@ -5,23 +5,37 @@ import java.io.Serializable;
 /* 
  * Java commonly used interfaces:
  * - Cloneable => from java.lang
- * - Serializable => from java.io.
- * - Remote => import java.rmi.Remote;
+ * - Serializable => from java.io
+ * - Remote => from java.rmi
  */
 // import java.rmi.Remote; // for Remote interface
 
 /* 
  * The "Employee" class implements "Serializable" interface,
  * so we can serialize its object(s)
+ * 
+ * Simple Explanation :-)
+ * **********************
+ * "Serializable" is a marker interface (no methods or fields).
+ * It tells Java that objects of this class can be converted into a byte stream.
+ * This byte stream can then be saved to a file or sent over a network,
+ * and later reconstructed (deserialized) back into the same object.
+ * 
+ * >> Serialization in Java is done using:
+ *    - ObjectOutputStream --> to write (save) an object
+ *    - ObjectInputStream --> to read (load) an object
+ * 
+ * Link: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/Serializable.html
  */
 public class Employee implements Serializable {
     /*
      * Try the code without the "serialVersionUID":
+     * ********************************************
      * 
      * The serialization runtime associates with each serializable class a version
      * number called a "serialVersionUID".
      * 
-     * Is used during deserialization to verify that the sender and receiver of a
+     * It is used during deserialization to verify that the sender and receiver of a
      * serialized object have loaded classes for that object that are compatible
      * with respect to serialization.
      * 
@@ -38,16 +52,16 @@ public class Employee implements Serializable {
      * Link: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/
      * Serializable.html
      * 
+     * With a specialized Java IDE like Eclipse,
+     * you can select the option from IntelliSense
+     * to let the IDE generate a long version number.
+     * It will be created based on the class name, interfaces, fields, and methods.
      * 
-     * With a specialized Java IDE like eclipse,
-     * You can select the option from the intellisense
-     * to let the IDE generates a long version number
-     * It will be created based on the class name, interface, fields, and methods
-     * 
-     * 
-     * IMPORTANT NOTE: Notice that:
+     * IMPORTANT NOTE:
+     * ***************
+     * Notice that:
      * 1. If we don't add this variable statement
-     * Java will control the Serial version behind the scenes,
+     * Java will control the serial version behind the scenes,
      * so any change we make in this class structure:
      * - Java will update/change the long value of "serialVersionUID"
      * so its object has to be serialized again before being deserialized
@@ -55,23 +69,22 @@ public class Employee implements Serializable {
      * Exception in thread "main" java.io.InvalidClassException:
      * 
      * 2. If we explicitly define the value of "serialVersionUID"
-     * Java will have NO control the Serial version,
+     * Java will have NO control over the serial version,
      * so any change we make in this class structure:
      * - Java will NOT update/change the value of "serialVersionUID"
      * since it has been set by us "the developers :-)"
-     * So when we just deserialize the object before being serialized
-     * Our code will run fine but with the previous settings of the object
+     * So when we deserialize the object before being serialized again,
+     * our code will run fine but with the previous settings of the object.
      * 
-     * Put it on action: comment/uncomment
+     * Put it into action: comment/uncomment the line below to see the effect.
      */
 
     // long value:
     // private static final long serialVersionUID = 6971726947666774470L;
 
-    // Class :
+    // Class fields (attributes):
     private String name, jobTitle;
     private double payment;
-
     private int empId;
 
     // Constructor:
@@ -81,6 +94,7 @@ public class Employee implements Serializable {
         this.payment = payment;
     }
 
+    // toString() is overridden to print object data in a readable format
     public String toString() {
         // First Way:
         // => using the classical way with concatenation:
@@ -108,4 +122,20 @@ public class Employee implements Serializable {
     public void setEmpId(int empId) {
         this.empId = empId;
     }
-}
+
+    /*
+     * To summarize:
+     * - "implements Serializable" marks this class for serialization.
+     * - "serialVersionUID" ensures version compatibility between
+     * serialized and deserialized objects.
+     * - You can now write Employee objects to a file using ObjectOutputStream
+     * and read them back using ObjectInputStream.
+     * 
+     * Link: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/
+     * ObjectOutputStream.html
+     * Link: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/
+     * ObjectInputStream.html
+     * Link: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/
+     * StringBuffer.html
+     */
+} // class

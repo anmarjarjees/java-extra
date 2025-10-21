@@ -1,7 +1,9 @@
 package p02_anonymous_inner_classes;
 
+// Interface:
 public interface Payment {
-    double calculateGross(double hours);
+    // creating some methods:
+    public double calculateGrossPay(double hours);
 
-    void doSomething(int i, double x);
+    public void doSomething(int i, double x);
 }

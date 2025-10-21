@@ -1,7 +1,7 @@
 package p02_anonymous_inner_classes;
 
 public class Vehicle {
-    // the Vehicle class has three fields
+    // The Vehicle class has three fields
     // Private Fields CANNOT be accessed by the subclasses
     private String brand; // Toyota, Nissan, ..
     private String type; // Sedan, SUV, Van, ..

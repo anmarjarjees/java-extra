@@ -1,9 +1,24 @@
 package p02_anonymous_inner_classes;
 
+// ALT + SHIFT + F => Format Code in VS code
+// CTRL + AL + L => format Code in Intellij
 public class Main {
     public static void main(String[] args) {
         Car myCar = new Car();
         myCar.StartDriving();
+
+        /*
+         * Imagine, that we only have one car
+         * that start driving on water!
+         * so only one car that can drive on road and water!
+         * we need:
+         * > only one object
+         * > Override (change) the method "StartDriving"
+         * - to print driving on water!
+         * 
+         * so below we creating a very special car,
+         * this car can drive on water also :-)
+         */
 
         /*
          * Creating a new type of a unique car that can drive on water also!
@@ -30,6 +45,10 @@ public class Main {
         specialCar.StartDriving();
 
         /*
+         * we can also use the idea of Inner/Anonymous with Interfaces!
+         */
+
+        /*
          * The other way of creating an anonymous class
          * is by implementing an interface
          * 
@@ -50,11 +69,13 @@ public class Main {
          * But we are creating an object named "myPayment"
          * from a class type that doesn't have a name
          */
-        Payment myPayment = new Payment() {
 
+        // calling our Interface:
+        Payment myPayment = new Payment() {
             @Override
-            public double calculateGross(double hours) {
-                return 0;
+            public double calculateGrossPay(double hours) {
+                // Assuming that $20 per hour:
+                return (hours * 20);
             }
 
             @Override
@@ -62,7 +83,12 @@ public class Main {
                 System.out.println("Nothing to do!");
 
             }
-        };
+        }; // Payment Inner class
+        /*
+         * NOTE:
+         * We need to end the inner class block with ;
+         * Otherwise, Java Compiler will complain :-(
+         */
 
-    } // end main()
-}
+    } // main()
+} // class
