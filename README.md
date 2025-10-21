@@ -9,7 +9,7 @@ Anonymous/Inner Class has the following features:
 - It has the same syntax like using a constructor but with a block of code
 
 # Interfaces:
-For basic idea about interface check my repo "Java Essentials"
+For basic idea about **"Interface in Java"** check my repo ["Java Essentials"](https://github.com/anmarjarjees/java-essentials).
 
 ## Marker Interface: 
 Is an interface that doesn't have any method declaration. 
