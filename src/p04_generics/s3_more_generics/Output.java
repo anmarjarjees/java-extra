@@ -1,13 +1,21 @@
 package p04_generics.s3_more_generics;
 
 /* 
+ * Generic class specialized for Vehicle types:
+ * ********************************************
+ * 
  * Make our Generic class more specialized for any type of "Vehicle"
- * Since we hav:
+ * Since we have:
  * - Car class extends Vehicle class
  * - Bus class extends Vehicle class
  * 
- * we can use "extends" with the <T> "for type by convention" to extend the superclass "Vehicle"
- * so class "Output" can print both "Car" and "Bus"
+ * Bounded Generics:
+ * *****************
+ * - We can use "extends" with the <T> "for type by convention" to extend the superclass "Vehicle"
+ *      > T extends Vehicle => T must be Vehicle or its subclasses
+ * 
+ * - This allows Output<T> to work only for Vehicles (Car, Bus, etc.)
+    *  > so class "Output" can print both "Car" and "Bus"
  * 
  * When we make our Generic "T" type extending a class,
  * it's called "Bounded Generic" because we are using "Bounded Type Parameters"
@@ -22,6 +30,9 @@ package p04_generics.s3_more_generics;
  * Example:
  * public class Output<T extends Serializable> {...}
  * 
+ * Multiple bounds possible:
+ * *************************
+ *  T extends Vehicle & Serializable & Cloneable
  * We can also have multiple bounds:
  * We can make our type "T" extends a "class" and an "interface" at the same time
  * by using the "&" as a separator.

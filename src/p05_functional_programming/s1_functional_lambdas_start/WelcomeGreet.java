@@ -1,11 +1,13 @@
 package p05_functional_programming.s1_functional_lambdas_start;
 
 /*
- * Our WelcomeGreet java class file to implement our interface "Welcome"
+ * Classical implementation of the functional interface "Welcome"
+ * Using a separate class
  */
 public class WelcomeGreet implements Welcome {
-    
-    // Override our method "greet":
+
+    // Implementing the single abstract method "greet"
+    @Override
     public void greet() {
         System.out.println("Welcome to Functional Interfaces with Java :-)");
     }

@@ -53,6 +53,36 @@ Generic forces the idea of "Type Safe"
 
 **Check the package "p01_marker_interfaces" section#2 "s2_serialization"**
 
+## Packages And Code File Sequence:
+- Package: p04_generics.s1_why_generics
+    - OutputInt.java – Class for printing int values
+    - OutputDouble.java – Class for printing double values
+    - OutputString.java – Class for printing String values
+    - Main.java – Demonstrates why separate classes are inconvenient (introduces the need for generics)
+
+- Package: p04_generics.s2_using_generics
+    - Output.java – Generic class <T>
+    - Main.java – Demonstrates generic class usage with:
+        - Integer
+        - Double
+        - Float
+        - String
+
+- Package: p04_generics.s3_more_generics
+    - Vehicle.java – Base class
+    - Car.java – Subclass of Vehicle
+    - Bus.java – Subclass of Vehicle
+    - Output.java – Bounded generic class <T extends Vehicle>
+    - Main.java – Demonstrates:
+        - Generics with subclass objects (Car & Bus)
+        - Generic methods (printAnything, printAnyTwoVar, returnAnyType)
+
+- Package: p04_generics.s4_wild_cards
+    - Main.java – Demonstrates wildcard generics (?) and printing List<?> of different types:
+    - Integer
+    - String
+    - Car      
+
 # Functional Programming
 Java is not considered to be a functional programming language, it's an OOP language. But with Java 8, we have functional interfaces. In functional programming we focus on functions instead of focusing on objects.
 
@@ -92,6 +122,21 @@ System.out.println(provinces.size() + " provinces: " + provinces);
 
 provinces.forEach(province -> System.out.println(province));
 ```
+
+## Packages And Code File Sequence:
+- Package: p05_functional_programming.s1_functional_lambdas_start
+    - Welcome.java – Functional interface (no parameters)
+    - WelcomeGreet.java – Class implementing Welcome
+    - Main.java – Demonstrates three ways to implement Welcome:
+        - Normal class
+        - Anonymous inner class
+        - Lambda expression
+
+- Package: p05_functional_programming.s2_functional_lambdas_more
+    - Average.java – Functional interface (with parameters & return)
+    - Main.java – Demonstrates:
+        - Lambda expression with multiple lines
+        - Built-in functional interface DoubleBinaryOperator
 
 ## Streams API:
 Stream API can be used with lambdas to create concise or powerful code

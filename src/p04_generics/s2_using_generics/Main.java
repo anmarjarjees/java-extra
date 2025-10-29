@@ -1,12 +1,28 @@
 package p04_generics.s2_using_generics;
 
+/* 
+ * Demonstrates usage of the generic Output<T> class:
+ * **************************************************
+ * 
+ * Key Points To Consider:
+ * ***********************
+ * 1- Java Generics enforce type safety at compile time.
+ * 2- Generics do NOT accept primitive types directly (int, double, float)
+ *    > we need to use "Wrapper classes": (Integer, Double, Float)
+ * 3- Diamond operator <> allows type inference (no need to repeat the type).
+ * 
+ * Link: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/package-summary.html
+ * Link: https://docs.oracle.com/javase/tutorial/java/generics/types.html#diamond
+ */
 public class Main {
     public static void main(String[] args) {
         // Calling our class:
-        // If we do this code/line below:
+
+        // IMPORTANT NOTE: If we do this code/line below:
         // Output printSomething = new Output(200);
         /*
-         * Java will throw this error:
+         * Java will warn about raw types and type safety!
+         * The error message:
          * Output is a raw type.
          * References to generic type Output<T> should be parameterized
          * 
@@ -23,21 +39,25 @@ public class Main {
         // Output<Integer> printSomething = new Output(200);
 
         /*
-         * Solutions: We just needs to add an empty <>
-         * In the older versions of Java, we used to add <Integer> again,
-         * but with the new versions no need
+         * Solution:
+         * We just need to add an empty <>
+         * In older Java versions, we had to write <Integer> again,
+         * In modern Java (since Java 7) the diamond operator <> allows type inference.
          */
 
         /*
          * Important Note:
-         * Generics will not accept primitive data types:
-         * int, double, float
+         * ***************
+         * Generics will NOT accept primitive data types:
+         * - int, double, float
          * 
-         * We have to use the "Wrapper Classes":
-         * Integer instead of int
-         * Double instead of double
-         * Float instead of float
+         * Instead, we use Wrapper Classes:
+         * - Integer instead of int
+         * - Double instead of double
+         * - Float instead of float
          */
+
+        // Correct way to instantiate generic class using Wrapper classes
         Output<Integer> print1 = new Output<>(200);
         print1.printVar();
 

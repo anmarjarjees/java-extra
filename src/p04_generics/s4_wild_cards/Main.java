@@ -8,18 +8,21 @@ import p04_generics.s3_more_generics.Car;
 
 public class Main {
     public static void main(String[] args) {
+        // Example 1: List of Integers
         List<Integer> intList = new ArrayList<>();
         intList.add(1);
         intList.add(2);
         intList.add(3);
         printList(intList); // [1, 2, 3]
 
+        // Example 2: List of Strings
         List<String> strList = new ArrayList<>();
         strList.add("HTML");
         strList.add("CSS");
         strList.add("JavaScript");
         printList(strList); // [HTML, CSS, JavaScript]
 
+        // Example 3: List of Cars (custom class)
         List<Car> carList = new ArrayList<>();
         carList.add(new Car());
         carList.add(new Car());
@@ -27,6 +30,8 @@ public class Main {
     } // end main
 
     /*
+     * Generic method using a wildcard "?":
+     * ************************************
      * Create a method that takes a list
      * this list consists of any type of objects
      * then just printing the list
@@ -56,5 +61,8 @@ public class Main {
      * Java Error:
      * The method printList(List<Object>) in the type Main
      * is not applicable for the arguments (List<Integer>)
+     * 
+     * Wildcards are used to overcome this limitation:
+     * List<?> can accept a list of any type safely.
      */
 } // end class file

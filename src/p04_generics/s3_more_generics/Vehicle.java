@@ -1,8 +1,12 @@
 package p04_generics.s3_more_generics;
 
+/*
+ * Base class for vehicles
+ * Contains basic fields and methods common to all vehicles
+ */
 public class Vehicle {
     // the Vehicle class has three fields
-    // Private Fields CANNOT be accessed by the subclasses
+    // Remember: "Private" Fields CANNOT be accessed by the subclasses
     private String brand; // Toyota, Nissan, ..
     private String type; // Sedan, SUV, Van, ..
     private String wheels; // front-wheels drive, ...

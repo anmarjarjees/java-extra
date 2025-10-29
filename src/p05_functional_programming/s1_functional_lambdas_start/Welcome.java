@@ -1,13 +1,22 @@
 package p05_functional_programming.s1_functional_lambdas_start;
 
-// Our interface file "Welcome" to be implemented in the Main.java file
-
 /* 
-NOTE:
-Good practice to add this annotation just to help us remember that it's a functional interface that can have one method only.
-If we add another method the complier will give us a warning
-*/
+ * Functional Interface Example:
+ * *****************************
+ * 
+ * NOTE:
+ * - By convention, a functional interface should have only one abstract method.
+ * - Using the annotation @FunctionalInterface is a good practice:
+ *   - It informs the compiler and other developers 
+ *     that this interface is intended
+ *     to be functional.
+ *   - If you accidentally add a second abstract method, 
+ *     the compiler will throw a warning/error.
+ * 
+ * Link: https://docs.oracle.com/javase/17/docs/api/java/lang/FunctionalInterface.html
+ */
 @FunctionalInterface
 public interface Welcome {
-    void greet();    
+    // single abstract method:
+    void greet();
 }

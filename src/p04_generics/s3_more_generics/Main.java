@@ -20,6 +20,8 @@ public class Main {
         Output<Bus> print2 = new Output<>(new Bus());
         print2.printVar();
 
+        // Generic Methods:
+
         printAnything("ABC"); // class java.lang.String
         printAnything(123); // class java.lang.Integer
         printAnything(17.98); // class java.lang.Double
@@ -37,6 +39,8 @@ public class Main {
     } // end main()
 
     /*
+     * Generic method: prints class type of any variable:
+     * **************************************************
      * Besides the "Generic Classes",
      * We can have "Generic Methods"
      */
@@ -55,6 +59,8 @@ public class Main {
     }
 
     /*
+     * Generic method with two parameters of same type:
+     * ************************************************
      * We can add multiple parameters of Generic Data types
      */
     private static <T> void printAnyTwoVar(T anyVariable1, T anyVariable2) {
@@ -64,6 +70,8 @@ public class Main {
     }
 
     /*
+     * Generic method that returns the same type as input:
+     * ***************************************************
      * We can also make our method(s) return a generic data type
      */
     private static <T> T returnAnyType(T anyVariable) {
